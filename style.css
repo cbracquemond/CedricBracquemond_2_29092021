@@ -1,5 +1,7 @@
 body{
     font-family: 'Raleway', sans-serif;
+    margin-top:0;
+    margin-left: 10px;
     font-weight: 500;
 }
 
@@ -16,26 +18,102 @@ header{
     flex-wrap: wrap;
 }
 
+#logo{
+    width: 97px;
+    height: 45px;
+    padding: 20px 0px 30px 0px;
+    }
+
+#inscription{
+    color: #0065fc;
+    font-weight: 1000;
+    padding: 20px 10px 30px 15px;
+    border-top: #fff solid;
+}
+
+#inscription:hover{
+    border-top: #0065fc solid;
+}
+
 /* "Hébergement/Activités border */
 nav{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    border-bottom: #f2f2f2 solid;
-    margin: ;
+    margin:none;
 }
 
-#logo{
-    width: 97px;
-    height: 45px;
-    margin: 20px 0px 30px 10px;
+nav a{
+    padding: 0 17% 0 10%;
+    border-bottom: #f2f2f2 3px solid;
+    width: 100%;
 }
 
-#inscription{
+nav a:hover{
     color: #0065fc;
-    font-weight: 1000;
-    margin: 20px 10px 30px 0px;
+    border-bottom: #0065fc solid;
 }
+
+/* "Hébergement/Activités media */
+@media (min-width: 430px){
+    #inscription{
+        order: 1;
+    }
+
+    header{
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+    nav{
+        justify-content: flex-end;
+        width: auto;
+    }
+    nav a{
+        border-bottom: none;
+        border-top: #fff solid;
+    }
+    nav a:hover{
+        color: #0065fc;
+        border-bottom: none;
+        border-top: #0065fc solid;
+    }
+    #logo{
+        width: auto;
+        margin: 0px;
+        justify-self: flex-start;
+    }
+    nav a{
+        padding: 20px 15px 0;
+    }
+}
+
+
+/*search bar*/
+#search_box{
+    display: flex;
+}
+
+#search_box input{
+    margin: none;
+}
+
+#geo_marker{
+    background-color: #f2f2f2;
+}
+
+form button{
+    margin: 0px;
+    color: #fff;
+    background-color: #0065fc;
+    border: none;
+    height: 100%;
+    margin: none;
+}
+
+
+
+
 
 
 
