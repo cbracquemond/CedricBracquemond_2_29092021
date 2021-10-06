@@ -1,7 +1,7 @@
+/*Global*/
 body{
     font-family: 'Raleway', sans-serif;
-    margin-top:0;
-    margin-left: 10px;
+    margin:0;
     font-weight: 500;
 }
 
@@ -10,6 +10,7 @@ a{
     color: black;
 }
 
+/*Header*/
 header{
     display: flex;
     align-items: center;
@@ -18,102 +19,184 @@ header{
     flex-wrap: wrap;
 }
 
-#logo{
+header #logo{
     width: 97px;
     height: 45px;
-    padding: 20px 0px 30px 0px;
+    padding: 1rem 1rem 1rem 2rem;
     }
 
-#inscription{
+header #inscription{
     color: #0065fc;
     font-weight: 1000;
-    padding: 20px 10px 30px 15px;
+    padding: 2rem 1rem 1rem 1rem;
     border-top: #fff solid;
 }
 
-#inscription:hover{
+header #inscription:hover{
     border-top: #0065fc solid;
 }
 
 /* "Hébergement/Activités border */
-nav{
+header nav{
     display: flex;
     justify-content: space-around;
     width: 100%;
     margin:none;
 }
 
-nav a{
-    padding: 0 17% 0 10%;
+header nav a{
+    padding: 0 15% 0 15%;
     border-bottom: #f2f2f2 3px solid;
     width: 100%;
 }
 
-nav a:hover{
+header nav a:hover{
     color: #0065fc;
     border-bottom: #0065fc solid;
 }
 
-/* "Hébergement/Activités media */
-@media (min-width: 430px){
-    #inscription{
-        order: 1;
-    }
-
+/* header media */
+@media (min-width: 576px){
+    
     header{
         justify-content: flex-end;
         flex-wrap: nowrap;
         align-items: flex-start;
     }
-    nav{
+
+    header #inscription{
+        order: 1;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    header #logo{
+        width: 100%;
+        justify-self: flex-start;
+    }
+
+    header nav{
         justify-content: flex-end;
         width: auto;
     }
-    nav a{
+
+    header nav a{
         border-bottom: none;
         border-top: #fff solid;
+        padding: 2rem 1rem 1rem 1rem;
     }
-    nav a:hover{
+
+    header nav a:hover{
         color: #0065fc;
         border-bottom: none;
         border-top: #0065fc solid;
     }
-    #logo{
-        width: auto;
-        margin: 0px;
-        justify-self: flex-start;
-    }
-    nav a{
-        padding: 20px 15px 0;
-    }
+
 }
 
+/* main */
+main{
+    padding: 0 2rem;
+}
 
 /*search bar*/
-#search_box{
+main #search #search_box{
     display: flex;
 }
 
-#search_box input{
-    margin: none;
-}
-
-#geo_marker{
+main #search #search_box #geo_marker{
     background-color: #f2f2f2;
+    padding: 1rem 1rem 1rem 1.1rem;
+    border-radius: 1rem 0 0 1rem;
 }
 
-form button{
-    margin: 0px;
+main #search #search_box form{
+    display: flex;
+    border: #f2f2f2 solid;
+    flex-direction: row;
+    border-radius: 0rem 1rem 1rem 0rem ;
+}
+
+main #search #search_box input{
+    margin: none;
+    border: none;
+    width: auto;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
+main #search #search_box input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+
+main #search #search_box input:focus{
+    outline: none;
+}
+
+main #search #search_box form button{
     color: #fff;
     background-color: #0065fc;
-    border: none;
-    height: 100%;
+    border: #0065fc solid;
     margin: none;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+}
+main #search #search_box #button_text{
+    display: none;
+    font-weight: 700;
+}
+
+/*search bar media*/
+@media (min-width: 576px){
+    main #search #search_box #button_text{
+        display: inline;
+    }
+    main #search #search_box #button_icon{
+        display: none;
+    }
+    main #search #search_box form button{
+        border-radius: 0 1rem 1rem 0;
+    }
+
+}
+
+/*filter*/
+main #search #filters{
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+main #search #filters h2{
+    width: 100%;
 }
 
 
+/*footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding: 1.5rem 2rem;
+}
 
+footer ul{
+    list-style: none;
+    padding: 0rem;
+}
 
+footer li{
+    padding: 0 0 1rem 0;
+}
+
+/*footer media*/
+@media (min-width: 576px){
+    footer{
+        flex-direction: row;
+    }
+    footer div.footer_boxes{
+        margin-right: auto;
+    
+    }
 
 
 
