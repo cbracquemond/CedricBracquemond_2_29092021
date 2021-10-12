@@ -1,13 +1,44 @@
-/*Global*/
+/* variables */
+:root {
+    --blue: #0065fc;
+    --lightblue: #deebff;
+    --grey: #f2f2f2;
+}
+
+/*global*/
 body{
     font-family: 'Raleway', sans-serif;
     margin:0;
     font-weight: 500;
 }
 
+img{
+    display: none;
+}
+
 a{
     text-decoration: none;
     color: black;
+}
+
+button{
+    cursor: pointer;
+}
+
+h1{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+h2{
+    margin: 0px;
+}
+
+.cards{
+    background-color: #fff;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
 }
 
 /*Header*/
@@ -26,14 +57,14 @@ header #logo{
     }
 
 header #inscription{
-    color: #0065fc;
+    color: var(--blue);
     font-weight: 1000;
     padding: 2rem 1rem 1rem 1rem;
     border-top: #fff solid;
 }
 
 header #inscription:hover{
-    border-top: #0065fc solid;
+    border-top: var(--blue) solid;
 }
 
 /* "Hébergement/Activités border */
@@ -46,24 +77,226 @@ header nav{
 
 header nav a{
     padding: 0 15% 0 15%;
-    border-bottom: #f2f2f2 3px solid;
+    border-bottom: var(--grey) 3px solid;
     width: 100%;
 }
 
 header nav a:hover{
-    color: #0065fc;
-    border-bottom: #0065fc solid;
+    color: var(--blue);
+    border-bottom: var(--blue) solid;
 }
 
-/* header media */
+/* main */
+main{
+    padding: 0 2rem;
+}
+
+/*search bar*/
+#search #search_box{
+    display: flex;
+}
+
+#search #search_box #geo_marker{
+    background-color: var(--grey);
+    padding: 1rem 1rem 1rem 1.1rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+#search #search_box form{
+    display: flex;
+    border: var(--grey) solid;
+    flex-direction: row;
+    border-radius: 0rem 1rem 1rem 0rem ;
+}
+
+#search #search_box input{
+    margin: none;
+    border: none;
+    width: auto;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
+#search #search_box input::placeholder{
+    color: black;
+    font-weight: bold;
+}
+
+#search #search_box input:focus{
+    outline: none;
+}
+
+#search #search_box form button{
+    color: #fff;
+    background-color: var(--blue);
+    border: var(--blue) solid;
+    opacity: 0.9;
+    margin: -2px;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+}
+
+#search #search_box form button:hover{
+    opacity: 1;
+}
+
+#search #search_box #button_text{
+    display: none;
+    font-weight: 700;
+}
+
+/*filter*/
+#search #filters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+#search #filters h2{
+    width: 100%;
+}
+
+#search #filters #filter_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#search #filters .filter_button{
+    display: flex;
+    width: max-content;
+    align-items: center;
+    border: solid var(--grey);
+    margin: 0.6rem 1rem 0.6rem 0;
+    border-radius: 2rem;
+    transition: all 100ms;
+}
+
+#search #filters .filter_button:hover{
+    background-color: var(--grey);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+#search #filters .filter_button span{
+    margin: 0 1rem;
+    font-weight: 800;
+}
+
+#search #filters .fas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+    background-color: var(--lightblue);
+    border-radius: 50%;
+    margin: -2px;
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Information */
+#search #information{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+#search #information i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:  2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    border: solid var(--grey);
+    border-radius: 50%;
+    color: var(--blue);
+}
+
+#search #information p{
+    margin: 0;
+}
+
+/* housing */
+#housing {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#housing #famous {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey);
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+#housing #famous #title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#housing #famous #title i{
+    font-size: 24px;
+}
+
+#housing #famous #famous_offers{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#housing #city{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#housing #city #housing_offers{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#housing button{
+    border: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+/*footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey);
+    padding: 1.5rem 2rem;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0rem;
+}
+
+footer li{
+    padding: 0 0 1rem 0;
+}
+
 @media (min-width: 576px){
+
     
+    /* header */
     header{
         justify-content: flex-end;
         flex-wrap: nowrap;
         align-items: flex-start;
     }
-
+    
     header #inscription{
         order: 1;
         padding: 2rem 1rem 1rem 1rem;
@@ -78,125 +311,112 @@ header nav a:hover{
         justify-content: flex-end;
         width: auto;
     }
-
+    
     header nav a{
         border-bottom: none;
         border-top: #fff solid;
         padding: 2rem 1rem 1rem 1rem;
     }
-
+    
     header nav a:hover{
-        color: #0065fc;
+        color: var(--blue);
         border-bottom: none;
-        border-top: #0065fc solid;
+        border-top: var(--blue) solid;
     }
-
-}
-
-/* main */
-main{
-    padding: 0 2rem;
-}
-
-/*search bar*/
-main #search #search_box{
-    display: flex;
-}
-
-main #search #search_box #geo_marker{
-    background-color: #f2f2f2;
-    padding: 1rem 1rem 1rem 1.1rem;
-    border-radius: 1rem 0 0 1rem;
-}
-
-main #search #search_box form{
-    display: flex;
-    border: #f2f2f2 solid;
-    flex-direction: row;
-    border-radius: 0rem 1rem 1rem 0rem ;
-}
-
-main #search #search_box input{
-    margin: none;
-    border: none;
-    width: auto;
-    font-size: 1.2rem;
-    padding-left: 1rem;
-}
-
-main #search #search_box input::placeholder{
-    color: black;
-    font-weight: bold;
-}
-
-main #search #search_box input:focus{
-    outline: none;
-}
-
-main #search #search_box form button{
-    color: #fff;
-    background-color: #0065fc;
-    border: #0065fc solid;
-    margin: none;
-    padding: 0.8rem 1rem;
-    border-radius: 1rem;
-}
-main #search #search_box #button_text{
-    display: none;
-    font-weight: 700;
-}
-
-/*search bar media*/
-@media (min-width: 576px){
-    main #search #search_box #button_text{
+    
+    /* Search bar */
+    #search #search_box #button_text{
         display: inline;
     }
-    main #search #search_box #button_icon{
+    #search #search_box #button_icon{
         display: none;
     }
-    main #search #search_box form button{
+    #search #search_box form button{
         border-radius: 0 1rem 1rem 0;
     }
+    
+    /* filter */
+    #search #filters{
+        flex-direction: row;
+    }
+    #search #filters h2{
+        width: max-content;
+    }
+    
+    
+    /* filters */
+    #search #filters{
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-}
+    #search #filters h2{
+        margin-right:  0.6rem;
+    }
+    
+    #search #filters .filter_button{
+        margin: 0.6rem 1rem 0.6rem 0;
+    }
 
-/*filter*/
-main #search #filters{
-    display: flex;
-    flex-wrap: wrap;
-} 
+    /* housing */
 
-main #search #filters h2{
-    width: 100%;
-}
+    .fa-star{
+        color: var(--blue);
+    }
 
+    .four_stars i:last-child{
+        color: var(--grey);      
+    }
+    
+    #housing #famous{
+        flex-direction: column;
+    }
+    
+    #housing #famous #famous_offers{
+        flex-direction: row;
+    }
 
-/*footer*/
-footer{
-    display: flex;
-    flex-direction: column;
-    background-color: #f2f2f2;
-    padding: 1.5rem 2rem;
-}
+    #housing #famous .cards{
+        max-width: max-content;
+    }
+    
+    #housing #city #housing_offers{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-footer ul{
-    list-style: none;
-    padding: 0rem;
-}
+    #housing #city .cards{
+        max-width: max-content;
+    }
 
-footer li{
-    padding: 0 0 1rem 0;
-}
-
-/*footer media*/
-@media (min-width: 576px){
+    
+    /* footer */
     footer{
         flex-direction: row;
     }
+
     footer div.footer_boxes{
         margin-right: auto;
     
     }
 
+    
+}
 
+@media (min-width: 1024px){
 
+    #housing{
+        flex-direction: row;
+    }
+
+    #housing #famous{
+        order: 1;
+        flex-direction: column;
+    }
+
+    #housing #famous #famous_offers{
+        flex-wrap: wrap;
+    }
+
+}
