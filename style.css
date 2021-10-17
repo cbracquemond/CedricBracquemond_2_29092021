@@ -12,10 +12,6 @@ body{
     font-weight: 500;
 }
 
-/* img{
-    display: none;
-} */
-
 a{
     text-decoration: none;
     color: black;
@@ -32,7 +28,7 @@ h1,h2{
 }
 
 h3{
-    margin: 0px;
+    margin: 0 0 1rem;
     font-size: 1.1rem;
 
 }
@@ -137,7 +133,7 @@ header nav a:hover{
 #search #search_box input::placeholder{
     color: black;
     font-weight: bold;
-    /* opacity: 1; */
+    opacity: 1;
 }
 
 
@@ -150,7 +146,7 @@ header nav a:hover{
     background-color: var(--blue);
     border: var(--blue) solid;
     opacity: 0.9;
-    margin: -2px;
+    margin: -1px;
     padding: 0.8rem 1rem;
     border-radius: 1rem;
 }
@@ -248,7 +244,11 @@ header nav a:hover{
     box-shadow: 0 0 16px #0000002e;
     height: 12rem;
     width: 100%;
-    /* max-width: 25rem; */
+    transition: all 100ms;
+}
+
+.cards:hover{
+    transform: scale(1.01);
 }
 
 .card_content{
@@ -574,7 +574,7 @@ footer li{
         flex-direction: row;
     }
 
-    footer div.footer_boxes{
+    .footer_boxes{
         margin-right: auto;
     
     }
@@ -595,7 +595,6 @@ footer li{
 
     #housing #city .cards{
         flex-grow: 1;
-        /* width: 40%; */
     }
     
 }
@@ -624,6 +623,7 @@ footer li{
     }
     
     
+    /* "Activité" section: desktop */
     #activities{
         margin: 1rem 0 3rem;
     }
@@ -665,4 +665,22 @@ footer li{
         margin-right: 0px;
     }
     
+}
+
+@media(min-width:1400px){
+    body{
+        margin: auto;
+        max-width: 120rem;
+
+    }
+
+    footer{
+        width: auto;
+        margin: 2rem;
+    }
+
+    .footer_boxes{
+        margin-right: auto;
+    }
+
 }
