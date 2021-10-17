@@ -25,13 +25,13 @@ button{
     cursor: pointer;
 }
 
-h1{
+h1,h2{
     font-size: 1.5rem;
     font-weight: 800;
-    margin: 0px;
+    margin: 1rem 0;
 }
 
-h2{
+h3{
     margin: 0px;
     font-size: 1.1rem;
 
@@ -53,7 +53,7 @@ header{
 header #logo{
     width: 97px;
     height: 45px;
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 2rem 1rem 1rem 2rem;
     }
 
 header #inscription{
@@ -72,13 +72,19 @@ header nav{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin:none;
+    margin: 0;
 }
 
 header nav a{
-    padding: 0 15% 0 15%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
     border-bottom: var(--grey) 3px solid;
     width: 100%;
+}
+
+header nav a:first-child{
+    padding-left: 1rem;
 }
 
 header nav a:hover{
@@ -104,6 +110,7 @@ header nav a:hover{
 
 #search #search_box{
     display: flex;
+    margin: 2rem 0;
 }
 
 #search #search_box #geo_marker{
@@ -114,13 +121,13 @@ header nav a:hover{
 
 #search #search_box form{
     display: flex;
-    border: var(--grey) solid;
+    border: var(--grey) solid 1px;
     flex-direction: row;
     border-radius: 0rem 1rem 1rem 0rem ;
 }
 
 #search #search_box input{
-    margin: none;
+    margin: 0;
     border: none;
     width: auto;
     font-size: 1.2rem;
@@ -130,7 +137,9 @@ header nav a:hover{
 #search #search_box input::placeholder{
     color: black;
     font-weight: bold;
+    /* opacity: 1; */
 }
+
 
 #search #search_box input:focus{
     outline: none;
@@ -163,7 +172,7 @@ header nav a:hover{
     margin: 1rem 0;
 }
 
-#search #filters h2{
+#search #filters h3{
     width: 100%;
 }
 
@@ -237,18 +246,19 @@ header nav a:hover{
     border-radius: 1rem;
     padding: 0.3rem;
     box-shadow: 0 0 16px #0000002e;
-    height: 244px;
+    height: 12rem;
     width: 100%;
-    align-self: center;
+    /* max-width: 25rem; */
 }
 
 .card_content{
     display: flex;
-    flex-direction:column ;
+    flex-direction: column ;
     height: 100%;
 }
 
 .stars{
+    margin-top: auto;
 }
 
 .fa-star{
@@ -269,10 +279,7 @@ header nav a:hover{
     gap: 1rem;
 }
 
-#housing h1{
-    margin: 1rem 0;
-}
-
+/* "Populaires" section */
 #housing #famous {
     display: flex;
     flex-direction: column;
@@ -287,6 +294,7 @@ header nav a:hover{
 
 #housing #famous .card_content{
     padding: 0.5rem 1rem 0.5rem 0.5rem;
+    height: auto;
 }
 
 #housing #famous img{
@@ -314,6 +322,7 @@ header nav a:hover{
     margin-bottom: 1rem;
 }
 
+/* "Marseille" section */
 #housing #city{
     display: flex;
     flex-direction: column;
@@ -327,13 +336,13 @@ header nav a:hover{
 }
 
 #housing #city .card_content{
-    padding: 0 1rem 0.5rem;
+    padding: 0 0.5rem 0.5rem;
 }
 
 #housing #city img{
     border-radius: 1rem 1rem 0 0;
     width: 100%;
-    height: 8rem;
+    height: 7rem;
     object-fit: cover;
 }
 
@@ -345,8 +354,52 @@ header nav a:hover{
 
 #housing button{
     border: none;
-    font-weight: 600;
+    align-self: flex-start;
+    background-color: white;
+    font-weight: 800;
     font-size: 1.4rem;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+/* "Activités" section */
+#activities{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+#activities .big_box{
+    display: flex;
+    flex-direction: column;
+}
+
+#activities .column{
+    display: flex;
+    flex-direction: column;
+}
+
+#activities .cards{
+    flex-direction: column;
+    padding: 0;
+    margin: 1rem 0;
+    max-width: none;
+}
+
+#activities .cards h3{
+    margin-top: 0.2rem;
+    padding: 1rem 0 1rem 1rem;
+}
+
+#activities img{
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#activities .container{
+    height: 8.5rem;
 }
 
 /*footer*/
@@ -354,7 +407,7 @@ footer{
     display: flex;
     flex-direction: column;
     background-color: var(--grey);
-    padding: 1.5rem 2rem;
+    padding: 3rem 2rem;
 }
 
 footer ul{
@@ -382,6 +435,7 @@ footer li{
 
     header #logo{
         width: 100%;
+        padding-top: 1.1rem;
         justify-self: flex-start;
     }
 
@@ -417,7 +471,7 @@ footer li{
     
     /* filter */
 
-    #search #filters h2{
+    #search #filters h3{
         width: max-content;
     }
     
@@ -427,7 +481,7 @@ footer li{
         flex-wrap: wrap;
     }
 
-    #search #filters h2{
+    #search #filters h3{
         margin-right:  0.6rem;
     }
     
@@ -442,8 +496,17 @@ footer li{
     }
 
     #housing #famous{
-        flex-direction: column;
         border-radius: 1rem;
+    }
+
+    #housing #famous img{
+        width: 100%;
+    }
+
+    #housing #famous .container{
+        min-width: 9rem;
+        max-width: 18rem;
+        flex-basis: 30%;
     }
     
     #housing #famous #famous_offers{
@@ -452,6 +515,7 @@ footer li{
 
     #housing #famous .cards{
         width: 100%;
+        max-width: none;
     }
     
     #housing #city{
@@ -472,6 +536,38 @@ footer li{
         flex-wrap: wrap;
     }
 
+    #housing button{
+        background-color: var(--grey);
+    }
+
+
+    /* Activities */
+
+    #activities .big_box{
+        flex-direction: row;
+    }
+
+    #activities .column{
+        max-width: 50%;
+        flex-grow: 1;
+    }
+
+    #activities .cards{
+        height: 100%;
+    }
+
+    #activities .big_card{
+        height: auto;
+        margin-right: 1rem;
+    }
+
+    #activities .big_card img{
+        height: 100%;
+    }
+    
+    #activities .big_card .container{
+        height: 90%;
+    }
     
     /* footer */
     footer{
@@ -483,23 +579,90 @@ footer li{
     
     }
 
-    
 }
 
 @media (min-width: 768px){
-
-    #housing{
-        flex-direction: row;
+    
+    #housing #famous .cards{
+        max-width: none;
     }
 
-    #housing #famous{
-        order: 1;
-        flex-direction: column;
+    #housing #famous #famous_offers{
+        flex-direction: row;
+        flex-wrap: wrap;
+
     }
 
     #housing #city .cards{
         flex-grow: 1;
-        width: 50%;
+        /* width: 40%; */
+    }
+    
+}
+
+@media (min-width: 992px){
+    
+    #housing{
+        flex-direction: row;
+    }
+    
+    #housing #famous{
+        order: 1;
+        max-width: 30%;
     }
 
+    #housing #famous #famous_offers{
+        height: 100%;
+    }
+
+    #housing #famous .container{
+        width: 9rem;
+    }
+    
+    #housing #city .cards{
+        flex-basis: 30%;
+    }
+    
+    
+    #activities{
+        margin: 1rem 0 3rem;
+    }
+
+    .major_card{
+        min-height: 55%;
+    }
+
+    .minor_card{
+        max-height: 29%;
+    }
+
+    #activities .minor_card .container{
+        max-height: 53%;
+    }
+
+    #activities .major_card .container{
+        height: 75%;
+    }
+
+    #activities #main_box{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #activities .big_box{
+        width: 100%;
+        min-width: 50%;
+    }
+
+    #activities .column{
+        margin: 0 1rem 0 0;
+        width: 100%;
+        height: 100%;
+        max-height: 25rem;
+    }
+
+    #activities #second_column{
+        margin-right: 0px;
+    }
+    
 }
