@@ -345,12 +345,13 @@ header nav a:hover{
 
 #housing #city .cards{
     flex-direction: column;
+    min-width: 220px;
 }
 
 #housing #city .card_content{
     display: flex;
     justify-content: space-between;
-    padding: 0 8px 8px;
+    padding: 8px;
 }
 
 #housing #city .container{
@@ -633,7 +634,7 @@ footer li{
     
     #housing #famous{
         order: 1;
-        max-width: 30%;
+        min-width: 25%;
     }
 
     #housing #famous #famous_offers{
