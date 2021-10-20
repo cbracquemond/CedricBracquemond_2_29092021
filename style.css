@@ -346,7 +346,7 @@ header nav a:hover{
 
 #housing #city .cards{
     flex-direction: column;
-    min-width: 220px;
+    min-width: 208px;
 }
 
 #housing #city .card_content{
