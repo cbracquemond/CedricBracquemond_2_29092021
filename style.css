@@ -152,6 +152,7 @@ header nav a:hover{
     margin: -1px;
     padding: 13px 16px;
     border-radius: 16px;
+    cursor: pointer;
 }
 
 #search #search_box form .button:hover{
