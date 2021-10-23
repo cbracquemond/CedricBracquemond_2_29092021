@@ -128,10 +128,12 @@ header nav a:hover{
     width: auto;
     font-size: 0.9rem;
     padding-left: 16px;
+    max-width: 160px;
 }
 
 #search #search_box input::placeholder{
     color: black;
+    font-size: 0.9rem;
     font-weight: bold;
     opacity: 1;
 }
