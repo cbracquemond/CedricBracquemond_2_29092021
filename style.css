@@ -141,7 +141,7 @@ header nav a:hover{
     outline: none;
 }
 
-#search #search_box form button{
+#search #search_box form .button{
     color: #fff;
     background-color: var(--blue);
     border: var(--blue) solid;
@@ -151,7 +151,7 @@ header nav a:hover{
     border-radius: 16px;
 }
 
-#search #search_box form button:hover{
+#search #search_box form .button:hover{
     opacity: 1;
 }
 
@@ -494,7 +494,7 @@ footer li{
         display: none;
     }
 
-    #search #search_box form button{
+    #search #search_box form .button{
         border-radius: 0 16px 16px 0;
     }
     
